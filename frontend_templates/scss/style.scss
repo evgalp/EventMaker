@@ -1,0 +1,135 @@
+// compileCompressed: ../css/style.css
+
+@import 'variables';
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('../font/Roboto/Roboto-Light/Roboto-Light.eot?#iefix') format('embedded-opentype'),  url('../font/Roboto/Roboto-Light/Roboto-Light.woff') format('woff'), url('../font/Roboto/Roboto-Light/Roboto-Light.ttf')  format('truetype'), url('../font/Roboto/Roboto-Light/Roboto-Light.svg#Roboto-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('Roboto-Regular.eot?#iefix') format('embedded-opentype'),  url('../font/Roboto/Roboto-Regular/Roboto-Regular.woff') format('woff'), url('../font/Roboto/Roboto-Regular/Roboto-Regular.ttf')  format('truetype'), url('../font/Roboto/Roboto-Regular/Roboto-Regular.svg#Roboto-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: 'Roboto-Regular', sans-serif;
+  font-size: $font-normal;
+}
+
+// Helpers
+
+.full-screen{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.font-regular{
+  font-family: 'Roboto-Light';
+}
+
+.font-light{
+  font-family: 'Roboto-Light';
+}
+
+// Register page
+
+.home{
+  background: url('../img/home-bg.jpg');
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay{
+  background-color: #000;
+  opacity: .5;
+  z-index: 0;
+}
+
+.home-logo__top{
+  font-size: $font-x-large;
+  font-family: 'Roboto-Light';
+}
+
+.home-logo__bottom{
+  font-size: $font-large;
+  font-family: 'Roboto-Light';
+}
+
+.home-form{
+  margin-top: 30px;
+  background-color: $color-light;
+  border-radius: 5px;
+
+  &__tabs{
+    display: flex;
+  }
+
+  &__tab{
+    width: 50%;
+    padding: 15px;
+    text-align: center;
+    background-color: $color-semi-light;
+    transition: .2s ease;
+    color: $color-text;
+
+    &:hover{
+      cursor: pointer;
+      opacity: .9;
+      background-color: $color-accent;
+      text-decoration: none;
+      color: $color-text-light;
+    }
+    &:first-child{
+      border-top-left-radius: 5px;
+    }
+    &:last-child{
+      border-top-right-radius: 5px;
+    }
+    &--active{
+      background-color: $color-accent;
+      color: $color-text-light;
+    }
+  }
+
+  .home-form__ui{
+    padding: 50px 5px;
+    .ui-button{
+      width: 100%;
+      margin-top: 30px;
+      padding: 10px;
+    }
+  }
+
+}
+
+// ui elements
+
+.ui-form-group{
+  padding: 10px 0;
+  label{
+    color: $color-text
+  }
+  input{
+    outline: 0;
+  }
+}
+
+.ui-button{
+  background-color: $color-accent;
+  border: 1px solid $color-accent;
+  border-radius: 5px;
+  color: $color-text-light;
+  padding: 5px;
+  font-size: $font-normal;
+
+}
