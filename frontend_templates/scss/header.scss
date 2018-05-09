@@ -1,0 +1,37 @@
+@import 'variables';
+
+.header{
+  background-color: $color-accent;
+  padding: 20px;
+  &__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo{
+    color: $color-text-light;
+    font-size: $font-large;
+    font-family: 'Roboto-Light';
+  }
+  &__links{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin-bottom: 0;
+    li{
+      a{
+        font-family: 'Roboto-Light';
+        color: $color-light;
+        font-size: $font-medium;
+        transition: .2s ease;
+        margin-left: 20px;
+        padding: 20px 10px;
+        white-space: nowrap;
+        &:hover{
+          color: $color-accent-extra;
+        }
+      }
+    }
+  }
+
+}

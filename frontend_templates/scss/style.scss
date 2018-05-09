@@ -1,6 +1,11 @@
 // compileCompressed: ../css/style.css
 
 @import 'variables';
+@import 'home';
+@import 'header';
+@import 'profile';
+
+
 
 @font-face {
   font-family: 'Roboto-Light';
@@ -21,6 +26,10 @@
   font-size: $font-normal;
 }
 
+a:hover{
+  text-decoration: none;
+}
+
 // Helpers
 
 .full-screen{
@@ -39,79 +48,6 @@
   font-family: 'Roboto-Light';
 }
 
-// Register page
-
-.home{
-  background: url('../img/home-bg.jpg');
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.overlay{
-  background-color: #000;
-  opacity: .5;
-  z-index: 0;
-}
-
-.home-logo__top{
-  font-size: $font-x-large;
-  font-family: 'Roboto-Light';
-}
-
-.home-logo__bottom{
-  font-size: $font-large;
-  font-family: 'Roboto-Light';
-}
-
-.home-form{
-  margin-top: 30px;
-  background-color: $color-light;
-  border-radius: 5px;
-
-  &__tabs{
-    display: flex;
-  }
-
-  &__tab{
-    width: 50%;
-    padding: 15px;
-    text-align: center;
-    background-color: $color-semi-light;
-    transition: .2s ease;
-    color: $color-text;
-
-    &:hover{
-      cursor: pointer;
-      opacity: .9;
-      background-color: $color-accent;
-      text-decoration: none;
-      color: $color-text-light;
-    }
-    &:first-child{
-      border-top-left-radius: 5px;
-    }
-    &:last-child{
-      border-top-right-radius: 5px;
-    }
-    &--active{
-      background-color: $color-accent;
-      color: $color-text-light;
-    }
-  }
-
-  .home-form__ui{
-    padding: 50px 5px;
-    .ui-button{
-      width: 100%;
-      margin-top: 30px;
-      padding: 10px;
-    }
-  }
-
-}
-
 // ui elements
 
 .ui-form-group{
@@ -125,11 +61,29 @@
 }
 
 .ui-button{
+  font-family: 'Roboto-Light';
   background-color: $color-accent;
   border: 1px solid $color-accent;
   border-radius: 5px;
   color: $color-text-light;
   padding: 5px;
   font-size: $font-normal;
-
+  transition: .2s ease;
+  &:hover{
+    opacity: .8;
+    cursor: pointer;
+  }
+  &--danger{
+    background-color: $color-danger;
+    border-color: $color-danger;
+  }
 }
+
+.page-title{
+  font-family: 'Roboto-Light';
+  font-size: $font-large;
+  text-align: center;
+  padding: 20px 0;
+}
+
+// ---------------------------

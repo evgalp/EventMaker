@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Event Maker</title>
+
+  <link rel="stylesheet" href="./css/normalize.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/media.css">
+
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="header__content">
+            <div class="header__logo">Event Maker</div>
+            <ul class="header__links">
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">My events</a></li>
+              <li><a href="#">Dashboard</a></li>
+              <li><a href="#">Create an event</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="container">
+    <div class="row">
+      <div class="col col-lg-8 offset-lg-2 profile-board">
+        <div class="col-lg-8 offset-lg-2">
+          <h2 class="page-title">My profile</h2>
+          <div class="profile-board__avatar">
+            <img src="./img/jamesBond.jpg" alt="avatar">
+          </div>
+        </div>
+        <div class="col-lg-8 offset-lg-2">
+          <div class="profile__group">
+            <span class="profile__caption">Name</span>
+            <span class="profile__data profile__data--big">James Bond</span>
+          </div>
+          <div class="profile__group">
+            <span class="profile__caption">Date of birth</span>
+            <ul class="profile__date-list">
+              <li>
+                <span>Year</span>
+                <span class="profile__data profile__data--big">1968</span>
+              </li>
+              <li>
+                <span>Month</span>
+                <span class="profile__data profile__data--big">June</span>
+              </li>
+              <li>
+                <span>Day</span>
+                <span class="profile__data profile__data--big">15</span>
+              </li>
+            </ul>
+          </div>
+          <div class="profile__group">
+            <span class="profile__caption">Interests</span>
+            <span class="profile__data">Spying,  Serving UK,  Shooting</span>
+          </div>
+          <div class="profile__group">
+            <span class="profile__caption">Bio</span>
+            <span class="profile__data profile__data--textarea">James Bond was born on April 13, 1968, in Glencoe, Scotland, United Kingdom. His father Andrew Bond was a Senior Accounts Manager for Vickers Defence Systems (now BAE Systems Land & Armaments Group), while his mother Monique Bond (née Delacroix) was originally from Yverdonm Canton de Vaud, Switzerland.</span>
+          </div>
+        </div>
+        <div class="col-lg-8 offset-lg-2 profile__buttons">
+          <button class="ui-button ui-button--danger">Delete my profile</button>
+          <button class="ui-button">Edit my profile</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</body>
+</html>

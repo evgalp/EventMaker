@@ -1,0 +1,72 @@
+@import 'variables';
+
+.home{
+  background: url('../img/home-bg.jpg');
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay{
+  background-color: #000;
+  opacity: .5;
+  z-index: 0;
+}
+
+.home-logo__top{
+  font-size: $font-x-large;
+  font-family: 'Roboto-Light';
+}
+
+.home-logo__bottom{
+  font-size: $font-large;
+  font-family: 'Roboto-Light';
+}
+
+.home-form{
+  margin-top: 30px;
+  background-color: $color-light;
+  border-radius: 5px;
+
+  &__tabs{
+    display: flex;
+  }
+
+  &__tab{
+    width: 50%;
+    padding: 15px;
+    text-align: center;
+    background-color: $color-semi-light;
+    transition: .2s ease;
+    color: $color-text;
+
+    &:hover{
+      cursor: pointer;
+      opacity: .9;
+      background-color: $color-accent;
+      text-decoration: none;
+      color: $color-text-light;
+    }
+    &:first-child{
+      border-top-left-radius: 5px;
+    }
+    &:last-child{
+      border-top-right-radius: 5px;
+    }
+    &--active{
+      background-color: $color-accent;
+      color: $color-text-light;
+    }
+  }
+
+  .home-form__ui{
+    padding: 20px 10px;
+    .ui-button{
+      width: 100%;
+      margin-top: 30px;
+      padding: 10px;
+    }
+  }
+
+}

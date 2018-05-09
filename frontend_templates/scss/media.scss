@@ -1,0 +1,56 @@
+// compileCompressed: ../css/media.css
+
+@import 'variables';
+
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  .profile__group{
+    flex-direction: column;
+    align-items: flex-start;
+    .profile__caption{
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .profile__data{
+      width: 100%;
+    }
+  }
+  .profile__buttons{
+    flex-direction: column;
+    .ui-button{
+      width: 100%;
+      margin-top: 0px;
+      margin-bottom: 20px;
+
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) {
+  .header{
+    &__logo{
+      font-size: $font-medium;
+    }
+    &__links{
+      flex-grow: 1;
+      li{
+        margin: 10px 0;
+        a{
+          font-size: $font-normal;
+        }
+      }
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {
+
+}
