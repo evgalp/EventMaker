@@ -20,6 +20,9 @@ $color-text: #222;
   font-family: 'Roboto-Regular', sans-serif;
 }
 
+a{
+  transition: .2s ease;
+}
 
 .img-bg{
     background: url('../img/home-bg.jpg') no-repeat;
@@ -85,6 +88,9 @@ $color-text: #222;
         color: #fff;
         margin: 0 10px;
         white-space: nowrap;
+        &:hover{
+          opacity: .8;
+        }
       }
     }
   }
@@ -100,7 +106,45 @@ $color-text: #222;
       width: 60px;
       height: auto;
     }
-  }
-
-  
+  } 
 }
+
+.profile-form{
+  .profile-pic-upload{
+    a{
+      border: 1px solid #ececec;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      line-height: 100px; 
+      display: inline-block;
+      background-color: rgba(0,0,0,0.7);
+      text-align: center;
+      color: #ececec;
+      font-size: 50px;
+      font-family: 'Roboto-Light';
+      transition: .2s ease;
+      position: relative;
+      &:hover{
+        text-decoration: none;
+        opacity: .8;
+      }
+      &:after{
+        content: 'Upload your photo';
+        font-size: 14px;
+        white-space: nowrap;
+        color: #222;
+        position: absolute;
+        bottom: -70px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+  .form-group{
+    label{
+      // white-space: nowrap;
+    }
+  }
+}
+

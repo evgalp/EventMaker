@@ -13,6 +13,9 @@
 * {
   font-family: 'Roboto-Regular', sans-serif; }
 
+a {
+  transition: .2s ease; }
+
 .img-bg {
   background: url("../img/home-bg.jpg") no-repeat;
   position: absolute;
@@ -62,6 +65,8 @@
   color: #fff;
   margin: 0 10px;
   white-space: nowrap; }
+  .navbar .navbar-nav .nav-item .nav-link:hover {
+    opacity: .8; }
 
 .navbar .navbar-toggler {
   outline: 0;
@@ -72,3 +77,30 @@
     height: auto; }
     .navbar .navbar-toggler .navbar-toggler-icon > span {
       font-family: 'Roboto-Light'; }
+
+.profile-form .profile-pic-upload a {
+  border: 1px solid #ececec;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  color: #ececec;
+  font-size: 50px;
+  font-family: 'Roboto-Light';
+  transition: .2s ease;
+  position: relative; }
+  .profile-form .profile-pic-upload a:hover {
+    text-decoration: none;
+    opacity: .8; }
+  .profile-form .profile-pic-upload a:after {
+    content: 'Upload your photo';
+    font-size: 14px;
+    white-space: nowrap;
+    color: #222;
+    position: absolute;
+    bottom: -70px;
+    left: 50%;
+    transform: translateX(-50%); }
