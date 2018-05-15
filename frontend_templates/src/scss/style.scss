@@ -1,0 +1,106 @@
+
+$color-primary: #218838;
+$color-text: #222;
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('../fonts/Roboto/Roboto-Light/Roboto-Light.eot?#iefix') format('embedded-opentype'),  url('../fonts/Roboto/Roboto-Light/Roboto-Light.woff') format('woff'), url('../fonts/Roboto/Roboto-Light/Roboto-Light.ttf')  format('truetype'), url('../fonts/Roboto/Roboto-Light/Roboto-Light.svg#Roboto-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('Roboto-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/Roboto/Roboto-Regular/Roboto-Regular.woff') format('woff'), url('../fonts/Roboto/Roboto-Regular/Roboto-Regular.ttf')  format('truetype'), url('../fonts/Roboto/Roboto-Regular/Roboto-Regular.svg#Roboto-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: 'Roboto-Regular', sans-serif;
+}
+
+
+.img-bg{
+    background: url('../img/home-bg.jpg') no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #000;
+      opacity: 0.5;
+    }
+}
+
+.home-header{
+  color: #fff;
+  font-family: 'Roboto-light';
+}
+
+.home-form{
+  background: transparent;
+  border-radius: 5px;
+  overflow: hidden;
+  .nav-tabs{
+    li{
+      .nav-link{
+        border: 0;
+        border-radius: 0;        
+        background-color: #fff;
+        color: #222;
+      }
+      .nav-link.active{
+        background-color: $color-primary;
+        border: 0;
+        color: #fff;
+      }
+    }
+  }
+  .tab-content{
+    height: 400px;
+    .tab-pane{
+      width: 100%;
+    }
+  }
+}
+
+.navbar{
+  .navbar-brand{
+    font-family: 'Roboto-light';
+    font-size: 35px;
+  }
+  .navbar-nav{
+    .nav-item{
+      .nav-link{
+        font-family: 'Roboto-light';
+        color: #fff;
+        margin: 0 10px;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .navbar-toggler{
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    .navbar-toggler-icon{
+      >span{
+       font-family: 'Roboto-Light';
+      }
+      width: 60px;
+      height: auto;
+    }
+  }
+
+  
+}
