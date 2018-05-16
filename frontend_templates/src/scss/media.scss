@@ -8,3 +8,11 @@
   }
   
 }
+
+@media(max-width:1024px){
+  .card-wrapper {
+    .card-container{
+      width: 100%;
+    }
+  }
+}

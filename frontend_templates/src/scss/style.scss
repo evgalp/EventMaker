@@ -111,7 +111,7 @@ a{
 
 .profile-form{
   .profile-pic-upload{
-    a{
+    a, img{
       border: 1px solid #ececec;
       border-radius: 50%;
       width: 100px;
@@ -140,6 +140,10 @@ a{
         transform: translateX(-50%);
       }
     }
+    img{
+      width: 150px;
+      height: 150px;
+    }
   }
   .form-group{
     label{
@@ -148,3 +152,46 @@ a{
   }
 }
 
+.event-board{
+  .event-pic{
+    img{
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.will-go-btn--going{
+  background: transparent;
+  border: 1px solid #218838;
+  color: #218838;
+}
+
+.event-card{
+  .event-img{
+    img{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.page-title{
+  font-family: 'Roboto-Light';
+}
+.event-card-buttons{
+  button{
+    flex-grow: 1;
+    flex-basis: auto;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+}
+
+.card-wrapper {
+  .card-container{
+    width: 48%;
+  }
+}
