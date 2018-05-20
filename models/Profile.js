@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const ProfileSchema = new Schema({
   user: {
     type: Schema.Types.ObjectId,
-    ref: "usersCollection"
+    ref: "usersrecords"
   },
   name: {
     type: String,
@@ -24,10 +24,10 @@ const ProfileSchema = new Schema({
     {
       event: {
         type: Schema.Types.ObjectId,
-        ref: "eventsCollection"
+        ref: "eventsrecords"
       }
     }
   ]
 });
 
-module.exports = Profile = mongoose.model("profileCollection", ProfileSchema);
+module.exports = Profile = mongoose.model("profilerecords", ProfileSchema);
