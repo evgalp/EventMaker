@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const bodyPareser = require("body-parser");
 
 // Routes import
-const auth = require("./routes/api/auth");
+const users = require("./routes/api/users");
 const profile = require("./routes/api/profile");
 const events = require("./routes/api/events");
 
@@ -23,7 +23,7 @@ mongoose
   .catch(err => console.log(err));
 
 // Routes use
-app.use("/api/auth", auth);
+app.use("/api/users", users);
 app.use("/api/profile", profile);
 app.use("/api/events", events);
 
