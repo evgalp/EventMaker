@@ -25,7 +25,7 @@ const ProfileSchema = new Schema({
   },
   events: [
     {
-      event: {
+      eventId: {
         type: Schema.Types.ObjectId,
         ref: "eventsrecords"
       }

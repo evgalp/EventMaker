@@ -5,6 +5,7 @@ const passport = require("passport");
 // Event model
 const Event = require("../../models/Event");
 const User = require("../../models/User");
+const Profile = require("../../models/Profile");
 
 // Vaidators
 const validateEventInput = require("../../validation/event");
@@ -75,6 +76,7 @@ router.post(
   (req, res) => {
     Event.findByIdAndUpdate(req.params.event_id)
       .then(event => {
+        // If user already in event - reject
         if (
           event.going.filter(
             goingUser => goingUser.userId.toString() === req.user.id
@@ -82,12 +84,23 @@ router.post(
         ) {
           return res.status(400).json({ alreadyliked: "You already going" });
         }
-
+        // Add user to event otherwise
         event.going.push({
           userId: req.user.id,
           userName: req.user.name
         });
         event.save();
+
+        // Update users' profile event array
+        Profile.findOneAndUpdate({ user: req.user.id })
+          .then(profile => {
+            profile.events.push({
+              eventId: event._id
+            });
+            profile.save();
+          })
+          .catch(err => console.log(err));
+
         return res.json(event);
       })
       .catch(err => console.log(err));
