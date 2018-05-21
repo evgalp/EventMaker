@@ -10,6 +10,9 @@ const ProfileSchema = new Schema({
     type: String,
     required: true
   },
+  profilePic: {
+    type: String
+  },
   dateOfBirth: {
     type: Date,
     required: true
