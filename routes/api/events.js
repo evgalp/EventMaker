@@ -23,6 +23,17 @@ router.get("/test", (req, res) => res.json({ msg: "events route test" }));
 // @route  GET api/events/event/:event_id
 // @desc   Get event by event id
 // @access Public
+router.get("/event/:event_id", (req, res) => {
+  Event.findOne({ _id: req.params.event_id })
+    .then(event => {
+      if (!event) {
+        res.json({ error: "no such event" });
+      } else {
+        res.json(event);
+      }
+    })
+    .catch(err => console.log(err));
+});
 
 // @route  POST api/events/new
 // @desc   Create event
@@ -62,12 +73,21 @@ router.post(
   "/subscribe/:event_id",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
-    Event.findOneAndUpdate({ id: req.params.event_id })
+    Event.findByIdAndUpdate(req.params.event_id)
       .then(event => {
+        if (
+          event.going.filter(
+            goingUser => goingUser.userId.toString() === req.user.id
+          ).length > 0
+        ) {
+          return res.status(400).json({ alreadyliked: "You already going" });
+        }
+
         event.going.push({
           userId: req.user.id,
           userName: req.user.name
         });
+        event.save();
         return res.json(event);
       })
       .catch(err => console.log(err));

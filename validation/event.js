@@ -10,6 +10,10 @@ module.exports = function validateEventInput(data) {
   data.endDate = !isEmpty(data.endDate) ? data.endDate : "";
   data.description = !isEmpty(data.description) ? data.description : "";
 
+  if (Validator.isEmpty(data.title)) {
+    errors.title = "title is required";
+  }
+
   if (Validator.isEmpty(data.description)) {
     errors.description = "description is required";
   }
