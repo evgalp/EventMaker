@@ -6,7 +6,7 @@ const EventSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "usersrecords"
   },
-  name: {
+  title: {
     type: String,
     required: true
   },
@@ -21,10 +21,18 @@ const EventSchema = new Schema({
     type: String,
     required: true
   },
+  creator: {
+    type: String,
+    required: true
+  },
   going: [
     {
-      user: {
+      userId: {
         type: Schema.Types.ObjectId,
+        ref: "usersrecords"
+      },
+      userName: {
+        type: String,
         ref: "usersrecords"
       }
     }
